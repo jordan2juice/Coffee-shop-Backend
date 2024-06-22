@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "name": "John Doe",
+      "username": "johndoe",
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "phone": "1234567890",
+      "isActive": true,
+      "role": "user"
+    },
+    {
+      "name": "Jane Smith",
+      "username": "janesmith",
+      "email": "janesmith@example.com",
+      "password": "password456",
+      "phone": "0987654321",
+      "isActive": false,
+      "role": "admin"
+    }
+  ]
+}
+<<<<<<<<<<<<<<  ✨ Codeium Command ⭐ >>>>>>>>>>>>>>>>
+    
+    {
+      "name": "Bob Johnson",
+      "username": "bobjohnson",
+      "email": "bobjohnson@example.com",
+      "password": "password789",
+      "phone": "9876543210",
+      "isActive": true,
+      "role": "admin"
+    },
+    {
+      "name": "Alice Wilson",
+      "username": "alicewilson",
+      "email": "alicewilson@example.com",
+      "password": "password101",
+      "phone": "0123456789",
+      "isActive": false,
+      "role": "user"
+    }
+<<<<<<<  1e577e53-14a3-4080-9042-8345716103b2  >>>>>>>
