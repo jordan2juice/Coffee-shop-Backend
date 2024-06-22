@@ -1,8 +1,8 @@
 "use strict";
 
-function role(allowRoles) {
+function role() {
   return (req, res, next) => {
-    if (!allowRoles.includes(req.role)) {
+    if (!req.role) {
       res.status(401).send({ error: "Unauthorized" });
     }
     next();
