@@ -3,12 +3,12 @@
 const jwt = require("jsonwebtoken");
 
 function auth(req, res, next) {
-  const token = req.header("Authorization").replace("Bearer ", "");
-
-  if (!token) {
-    return res.status(401).send({ error: "Please authenticate." });
-  }
   try {
+    const token = req.header("Authorization").replace("Bearer ", "");
+
+    if (!token) {
+      return res.status(401).send({ error: "Please authenticate." });
+    }
     const decoded = jwt.verify(token, process.env.SECRET);
     req.role = decoded.role;
     next();
