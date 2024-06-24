@@ -28,7 +28,7 @@ async function checkPassword(req, res, next) {
 
 async function signToken(req, res, next) {
   const userId = req.user._id;
-  const role = req.user.role;
+  const role = req.user.isAdmin;
   const token = jwt.sign({ userId, role }, process.env.SECRET, {
     expiresIn: "1h",
   });

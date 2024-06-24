@@ -4,9 +4,9 @@ const express = require("express");
 const {
   getProduct,
   newProduct,
-  getProductByName,
   updateProduct,
   deleteProduct,
+  getProductById,
 } = require("../controllers/productController");
 const upload = require("../middleware/upload");
 
@@ -17,7 +17,7 @@ product
   .post(upload.single("image"), newProduct)
   .get(getProduct);
 
-product.route("/products/:name").get(getProductByName);
+product.route("/products/:id").get(getProductById);
 
 product.route("/products/:id").put(updateProduct);
 

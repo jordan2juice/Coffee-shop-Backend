@@ -23,14 +23,14 @@ userRouter.route("/register").post(register);
 
 userRouter.route("/login").post(checkEmail, checkPassword, signToken, login);
 
-userRouter.route("/").get(auth, role(["admin"]), getUser);
+userRouter.route("/").get(auth, role, getUser);
 
-userRouter.route("/:id").get(auth, role(["admin"]), getUserById);
+userRouter.route("/:id").get(auth, role, getUserById);
 
-userRouter.route("/username").get(auth, role(["admin"]), getUserByUsername);
+userRouter.route("/username").get(auth, role, getUserByUsername);
 
-userRouter.route("/:id").delete(auth, role(["admin"]), deleteUser);
+userRouter.route("/:id").delete(auth, role, deleteUser);
 
-userRouter.route("/:id").put(auth, role(["admin"]), updateUser);
+userRouter.route("/:id").put(auth, role, updateUser);
 
 module.exports = userRouter;

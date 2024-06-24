@@ -10,6 +10,7 @@ function auth(req, res, next) {
       return res.status(401).send({ error: "Please authenticate." });
     }
     const decoded = jwt.verify(token, process.env.SECRET);
+    console.log(decoded);
     req.role = decoded.role;
     next();
   } catch (error) {

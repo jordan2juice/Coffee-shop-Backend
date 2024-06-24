@@ -23,8 +23,6 @@ async function newProduct(req, res, next) {
   }
 }
 
-
-
 async function getProduct(req, res, next) {
   try {
     const products = await Product.find();
@@ -34,12 +32,13 @@ async function getProduct(req, res, next) {
   }
 }
 
-async function getProductByName(req, res, next) {
+async function getProductById(req, res, next) {
   try {
     const product = await Product.findById(req.params.id);
     if (!product) {
       res.status(404).json("Product not found");
     }
+    res.status(200).json(product);
   } catch (error) {
     next(error);
   }
@@ -65,8 +64,8 @@ async function updateProduct(req, res, next) {
 
 async function deleteProduct(req, res, next) {
   try {
-    const { name } = req.params;
-    const deletedProduct = await Product.findByIdAndDelete(name);
+    const { id } = req.params;
+    const deletedProduct = await Product.findByIdAndDelete(id);
     res.status(200).json(deletedProduct);
   } catch (error) {
     next(error);
@@ -78,5 +77,5 @@ module.exports = {
   deleteProduct,
   newProduct,
   getProduct,
-  getProductByName,
+  getProductById,
 };
