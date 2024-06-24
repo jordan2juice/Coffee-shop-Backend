@@ -150,6 +150,8 @@ We need to deploy it on Render. The project is deployed on Render and everything
 
 With Render having my project go live it completes the assignment.
 
+![alt text](image-9.png)
+
 ## Conclusion
 
 This is a simple backend API for a coffee shop. It allows users to create, read, update user information as well as product information as well.
